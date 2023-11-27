@@ -9,42 +9,48 @@ Dichiariamo chi ha vinto.
 
 
 // inserisci un numero da 1 a 5
-const userNumber = prompt("Scegli un numero da 1 a 5");
+const userNumber = parseInt(prompt("Scegli un numero da 1 a 5"));
 console.log(userNumber);
 
 // scegli tra "pari" e "dispari"
 const userChoice = prompt("Scegli tra pari e dispari");
 console.log(userChoice);
 
-// crea la funzione che genera in automatico il numero del computer
+
+// crea la funzione che genera un numero random tra 1 e 5
 function numRandom (min, max) {
-    const randomNum = Math.floor(Math.random() * (max-min)) + min;
+    let randomNum = Math.floor(Math.random() * (max - min) + min);
     return randomNum;
 }
 
+
 // genera il numero del computer
-const computerNumber = numRandom(1, 5);
+let computerNumber = numRandom(1, 5);
 console.log(computerNumber);
 
 
-// sommiamo i due numeri
-const sumOfNumbers = (+userNumber + +computerNumber);
-console.log(sumOfNumbers);
-
-
-// funzione per stabilire se pari o dispari
-function pariOppureDispari (sumOfNumbers) {
-
-    if (sumOfNumbers % 2) {
-        console.log("dispari");
-    } else {
-        console.log("pari");
-    }
+// funzione che somma i numeri
+function sommaNumeri (num1, num2) {
+    let sommaDeiNumeri = num1 + num2;
+    return sommaDeiNumeri;
 }
 
-pariOppureDispari(sumOfNumbers);
+// sommare i due numeri con la funzione
+let sommaDeiNumeri = sommaNumeri(userNumber, computerNumber);
+console.log(sommaDeiNumeri);
 
 
+// check se pari o dispari
+if (sommaDeiNumeri % 2) {
+    result = "dispari";
+} else {
+    result = "pari";
+}
 
-
+// hai vinto o hai perso
+if (userChoice === result) {
+    console.log("hai vinto");
+} else {
+    console.log("hai perso");
+}
 
