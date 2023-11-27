@@ -19,6 +19,13 @@ function numRandom (min, max) {
 }
 
 // genera il numero del computer
-let computerNumber = numRandom(1, 5);
+const computerNumber = numRandom(1, 5);
 console.log(computerNumber);
 
+
+// sommiamo i due numeri
+const sumOfNumbers = (+userNumber + +computerNumber);
+console.log(sumOfNumbers);
+
+
+// funzione per stabilire se pari o dispari
