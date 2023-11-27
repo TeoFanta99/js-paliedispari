@@ -12,6 +12,10 @@ Dichiariamo chi ha vinto.
 const userNumber = prompt("Scegli un numero da 1 a 5");
 console.log(userNumber);
 
+// scegli tra "pari" e "dispari"
+const userChoice = prompt("Scegli tra pari e dispari");
+console.log(userChoice);
+
 // crea la funzione che genera in automatico il numero del computer
 function numRandom (min, max) {
     const randomNum = Math.floor(Math.random() * (max-min)) + min;
@@ -29,3 +33,18 @@ console.log(sumOfNumbers);
 
 
 // funzione per stabilire se pari o dispari
+function pariOppureDispari (sumOfNumbers) {
+
+    if (sumOfNumbers % 2) {
+        console.log("dispari");
+    } else {
+        console.log("pari");
+    }
+}
+
+pariOppureDispari(sumOfNumbers);
+
+
+
+
+
